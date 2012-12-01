@@ -9,3 +9,10 @@ protected/tests/report/*
 #Exclude db from repo
 protected/data/*.db
 
+#IDE files
+*.swp
+.buildpath
+.project
+.settings
+.idea
+nbproject
