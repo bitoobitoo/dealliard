@@ -9,6 +9,9 @@ protected/tests/report/*
 #Exclude db from repo
 protected/data/*.db
 
+#Developer local settings
+protected/config/devel.php
+
 #IDE files
 *.swp
 .buildpath
