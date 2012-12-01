@@ -1,0 +1,11 @@
+#Yii framework temp files
+assets/*
+!assets/.gitkeep
+protected/runtime/*
+!protected/runtime/.gitkeep
+protected/tests/report/*
+!protected/tests/report/.gitkeep
+
+#Exclude db from repo
+protected/data/*.db
+
