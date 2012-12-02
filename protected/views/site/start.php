@@ -98,58 +98,7 @@ $this->pageTitle = Yii::app()->name;
 		$(".right").append('<p class="parts_text_bold"><?php echo Yii::t('app','Consumer Info Text Part 4') ?></p>');
 		$(".Agreement").css("visibility","visible");
 		$("#type").val("consumer");
-	});	
-	
-	
-	function manufacturer()
-	{
-		if ($(".InfoText").is(":hidden"))
-		{
-			$(".Agreement").css("visibility","visible");
-		}	
-		$(".InfoText").html("<?php echo Yii::t('app','Manufacturer Info Text') ?>");
-		$("#type").val("manufacturer");
-	}
-	
-	function wholesaler()
-	{
-		if ($(".InfoText").is(":hidden"))
-		{
-			$(".Agreement").css("visibility","visible");
-		}
-		$(".InfoText").html("<?php echo Yii::t('app','Wholesaler Info Text') ?>");
-		$("#type").val("wholesaler");
-	}
-	
-	function retail()
-	{
-		if ($(".InfoText").is(":hidden"))
-		{
-			$(".Agreement").css("visibility","visible");
-		}
-		$(".InfoText").html("<?php echo Yii::t('app','Retail Info Text') ?>");
-		$("#type").val("retail");
-	}
-	
-	function supplier()
-	{
-		if ($(".InfoText").is(":hidden"))
-		{
-			$(".Agreement").css("visibility","visible");
-		}
-		$(".InfoText").html("<?php echo Yii::t('app','Supplier Info Text') ?>");
-		$("#type").val("supplier");
-	}
-	
-	function consumer()
-	{
-		if ($(".InfoText").is(":hidden"))
-		{
-			$(".Agreement").css("visibility","visible");
-		}
-		$(".InfoText").html("<?php echo Yii::t('app','Consumer Info Text') ?>");
-		$("#type").val("consumer");
-	}
+	});
 	
 	function check()
 	{
