@@ -11,13 +11,21 @@ class ProfileController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex()
+	public function actionIndex($id=0)
 	{
-//		$dataProvider=new CActiveDataProvider('User');
-//		$this->render('index',array(
-//			'dataProvider'=>$dataProvider,
-//		));
-        $this->render('index');
+        if($id==0){$id=1;}// FIXME: нулевой идентификатор -- это страница своего профиля
+        // TODO: проверять права на просмотр профиля
+
+        $this->render('index',array(
+            'model'=>$this->loadModel($id),
+        ));
 	}
 
+    private function loadModel($id)
+    {
+        $model=User::model()->findByPk($id);
+        if($model===null)
+            throw new CHttpException(404,'The requested page does not exist.');
+        return $model;
+    }
 }

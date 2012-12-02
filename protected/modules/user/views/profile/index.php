@@ -2,10 +2,7 @@
 /* @var $this DefaultController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Users',
-    $model->id,
-);
+$this->pageTitle = "My profile";
 
 $this->menu=array(
     array('label'=>'My profile', 'url'=>array('index')),
@@ -15,11 +12,8 @@ $this->menu=array(
 );
 ?>
 
-<h1>Users</h1>
-
-<h1>View User #<?php echo $model->id; ?></h1>
-
-<?php $this->widget('zii.widgets.CDetailView', array(
+<div class="profile">
+    <?php $this->widget('zii.widgets.CDetailView', array(
     'data'=>$model,
     'attributes'=>array(
         'id',
@@ -51,4 +45,4 @@ $this->menu=array(
     ),
 )); ?>
 
-
+</div>
