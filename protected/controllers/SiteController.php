@@ -109,6 +109,12 @@ class SiteController extends Controller
 		$this->render('start',array('model'=>$model));
 	}
 	
+	public function actionJoin()
+	{
+		$model=new JoinForm;
+		$this->render('join',array('model'=>$model));
+	}
+	
 	/**
 	 * Logs out the current user and redirect to homepage.
 	 */
