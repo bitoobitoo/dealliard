@@ -109,9 +109,17 @@ class SiteController extends Controller
 		$this->render('start',array('model'=>$model));
 	}
 	
-	public function actionJoin()
+	public function actionJoin($type=NULL)
 	{
 		$model=new JoinForm;
+		if (isset($_POST['JoinForm']))
+		{
+			$model->attributes=$_POST['JoinForm'];
+			if ($model->validate())
+			{
+				
+			}
+		}
 		$this->render('join',array('model'=>$model));
 	}
 	
