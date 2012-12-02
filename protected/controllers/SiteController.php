@@ -98,6 +98,11 @@ class SiteController extends Controller
 		$this->render('login',array('model'=>$model));
 	}
 
+	public function actionStart()
+	{
+		$this->render('start');
+	}
+	
 	/**
 	 * Logs out the current user and redirect to homepage.
 	 */
