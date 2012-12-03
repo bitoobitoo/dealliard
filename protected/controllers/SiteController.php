@@ -100,7 +100,27 @@ class SiteController extends Controller
 
 	public function actionStart()
 	{
-		$this->render('start');
+		$model=new StartForm;
+		if (isset($_POST['StartForm']))
+		{
+			$type= $_POST['StartForm']['type'];
+			$this->redirect(Yii::app()->request->redirect("/index.php?r=site/join&type=$type"));
+		}
+		$this->render('start',array('model'=>$model));
+	}
+	
+	public function actionJoin($type=NULL)
+	{
+		$model=new JoinForm;
+		if (isset($_POST['JoinForm']))
+		{
+			$model->attributes=$_POST['JoinForm'];
+			if ($model->validate())
+			{
+				
+			}
+		}
+		$this->render('join',array('model'=>$model));
 	}
 	
 	/**
