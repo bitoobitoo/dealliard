@@ -12,9 +12,7 @@
 <body>
 
 <div class="container" id="page">
-	<div id="mid">
-		<?php echo $content; ?>
-	</div>
+	<?php echo $content; ?>
 </div>
 
 </body>

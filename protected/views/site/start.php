@@ -23,7 +23,7 @@ $this->pageTitle = Yii::app()->name;
 					<input type="checkbox" class="AgreeCheckbox" onclick="check()">
 					<a href="index.php?r=site/agreement"><?php echo Yii::t('app','User Agreement')?></a>
 				</div>
-				<?php echo CHtml::submitButton(Yii::t('app','Proceed'),array("id"=>"proceed")); ?>
+				<?php echo CHtml::submitButton(Yii::t('app','Proceed'),array("id"=>"proceed","visibility"=>"hidden")); ?>
 				<?php echo CHtml::endForm(); ?>	
 			</div>
 		</div>	
@@ -36,9 +36,9 @@ $this->pageTitle = Yii::app()->name;
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 <script type="text/javascript">
 	
-	$(document).ready(function() {
-		$("#proceed").css("visibility","hidden");
-	});
+	//$(document).ready(function() {
+	//	$("#proceed").css("visibility","hidden");
+	//});
 	
 	$(".block1").live("click",function(){
 		$(".right").html('<img style="position:absolute;  top:50px ;left:-280px" src="./images/join/line1.png">');
